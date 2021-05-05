@@ -19,8 +19,8 @@ context = create_ssl_context()
 context.check_hostname = False
 context.verify_mode = ssl.CERT_NONE
 es = Elasticsearch(
-    ['tux-es1.cci.drexel.edu','tux-es2.cci.drexel.edu','tux-es3.cci.drexel.edu'],
-    http_auth=('lkr46', 'eiKaeCoi9eek'),
+    ['*******','***-***.***.*****.edu','******.edu'],
+    http_auth=('****', '*******'),
     scheme="https",
     port=9200,
     ssl_context = context,
@@ -66,7 +66,7 @@ def search():
             }
         }}
 
-    res = es.search(index="lkr46_info624_201904_ted_search", body=query_body)
+    res = es.search(index="info624_201904_ted_search", body=query_body)
     return render_template("results.html",res=res)
 
 
