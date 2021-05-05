@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+      <title>Search TED Home</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      select {
+          width: 200px;
+          margin: 0px;
+          height:25px;
+      }
+      select:focus {
+          min-width: 150px;
+          height:25px;
+          width: auto;
+      }
+      </style>
+  </head>
+
+
+  <body>
+    <h1>IDEAS WORTH SPREADING</h1>
+    <form action="/search" method="post">
+      <div class="input-group">
+        <input type="text" class="form-control input-lg" name="searchQuery" placeholder="Search TED" id='search-text-input' autofocus>
+        <!-- <div class="input-group-btn" style="height: 20px ; width: 60px; padding-right : 50px; padding-bottom : 50px"> -->
+          <button class="btn btn-primary btn-lg" type="submit" style="width: 150px"  >
+            <i class="fa fa-search fa-3x" ></i>
+          </button>
+        <!-- </div> -->
+      </div>
+      <div class="filter" style="text-align:center; font-size: 20px; height: 1em;">
+      <p style="color:white; text-align:center;" font size="15">
+        <strong>Filter By Tags</strong>
+      </p>
+      <select name="tag" id="tag">
+        <option value="">Select the Tag</option>
+        <option value="global issues">Global Issues</option>
+        <option value="education">Education</option>
+        <option value="architecture">Architecture</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="environment">Environment</option>
+        <option value="technology">Technology</option>
+        <option value="philosophy">Philosophy</option>
+        <option value="innovation">Innovation</option>
+        <option value="fashion">Fashion</option>
+        <option value="culture">Culture</option>
+        <option value="art">Art</option>
+
+      </select>
+      </div>
+    </form>
+
+
+
+
+  </body>
+</html>
